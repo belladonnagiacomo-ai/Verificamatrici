@@ -66,16 +66,16 @@
                 {
                     if(t == pattern[r, k] && i!=k)
                     {
-                        Console.WriteLine("Ci sono lettere uguali");
-                        return;
+                        Console.WriteLine("Ci sono lettere uguali in " + i);
+                        
                     }
                 }
                 
             }
-                
+            return;
 
-                
-            
+
+
         }
         static void Main(string[] args)
         {
