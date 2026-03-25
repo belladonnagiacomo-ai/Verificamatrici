@@ -48,21 +48,47 @@
             }
             else if(colonna > c)
             {
-                Console.WriteLine("Alto");
+                Console.WriteLine("Sinistra");
             }
             else if(colonna < c)
             {
-                Console.WriteLine("Basso");
+                Console.WriteLine("Destra");
             }
 
         }
+        static void Pattern(string[,] pattern, int r)
+        {
+            string t;
+            
+            for(int i = 0; i <pattern.GetLength(1); i++)
+            {
+                t = pattern[r,i];
+                for(int k = 1;  k < pattern.GetLength(0); k++)
+                {
+                    if(t == pattern[r, k])
+                    {
+                        Console.WriteLine("Ci sono lettere uguali");
+                    }
+                }
+            }
+                
 
+                
+            
+        }
         static void Main(string[] args)
         {
             int[,] m = { { 0, 0, 0, 0, 0 }, { 0, 0, 1, 0, 0 }, { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 } };
+            string[,] pattern = { { "G", "A", "L", "E", "K" }, { "R", "O", "K", "N", "O" }, { "M", "E", "L", "E", "S" }, { "C", "I", "N", "I", "S" } };
             Console.WriteLine("Dammi la colonna");
             int colonna = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
             cerca1(m, colonna);
+            Console.WriteLine();
+            Console.WriteLine("Dammi la riga");
+            int r = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
+            Pattern(pattern, r);
            
         }
     }
