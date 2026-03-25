@@ -63,11 +63,12 @@
             for(int i = 0; i <pattern.GetLength(1); i++)
             {
                 t = pattern[r,i];
-                for(int k = 1;  k < pattern.GetLength(0); k++)
+                for(int k = 0;  k < pattern.GetLength(1); k++)
                 {
-                    if(t == pattern[r, k])
+                    if(t == pattern[r, k] && i!=k)
                     {
                         Console.WriteLine("Ci sono lettere uguali");
+                        
                     }
                 }
             }
@@ -79,7 +80,7 @@
         static void Main(string[] args)
         {
             int[,] m = { { 0, 0, 0, 0, 0 }, { 0, 0, 1, 0, 0 }, { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 } };
-            string[,] pattern = { { "G", "A", "L", "E", "K" }, { "R", "O", "K", "N", "O" }, { "M", "E", "L", "E", "S" }, { "C", "I", "N", "I", "S" } };
+            string[,] pattern = { { "G", "A", "L", "E", "G" }, { "R", "O", "K", "N", "O" }, { "M", "E", "L", "E", "S" }, { "C", "I", "N", "I", "S" } };
             Console.WriteLine("Dammi la colonna");
             int colonna = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
