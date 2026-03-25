@@ -59,7 +59,6 @@
         static void Pattern(string[,] pattern, int r)
         {
             string t;
-            
             for(int i = 0; i <pattern.GetLength(1); i++)
             {
                 t = pattern[r,i];
@@ -68,9 +67,10 @@
                     if(t == pattern[r, k] && i!=k)
                     {
                         Console.WriteLine("Ci sono lettere uguali");
-                        
+                        return;
                     }
                 }
+                
             }
                 
 
